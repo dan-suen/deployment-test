@@ -3,15 +3,17 @@ const { Pool } = require('pg');
 //require('dotenv').config({ path: require('find-config')('.env') })
 
 const dbParams = {
-  host: process.env.DB_HOST,
-  port: process.env.DB_PORT,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
-  database: process.env.DB_NAME
+  connectionString : 'postgres://vyybmdqcukzutt:8ec8b94667c4f88c0a452e628fa7c846f1cf52e6de8997d2e2b91cbe99202ec6@ec2-54-157-79-121.compute-1.amazonaws.com:5432/d4mcojm2fndubn',
+  ssl: {
+    rejectUnauthorized: false,
+},
 };
 
 const proParams = {
-  connectionString: process.env.DATABASE_URL
+  connectionString : 'postgres://vyybmdqcukzutt:8ec8b94667c4f88c0a452e628fa7c846f1cf52e6de8997d2e2b91cbe99202ec6@ec2-54-157-79-121.compute-1.amazonaws.com:5432/d4mcojm2fndubn',
+  ssl: {
+    rejectUnauthorized: false,
+},
 };
 
 const db = new Pool(process.env.NODE_ENV === "production" ? proParams : dbParams);
