@@ -7,8 +7,7 @@
   "license": "MIT",
   "scripts": {
     "go": "nodemon server.js",
-    "start": "node server.js",
-    "heroku-postbuild": "cd express-back-end && npm install"
+    "start": "node server.js"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",

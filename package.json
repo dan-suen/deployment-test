@@ -40,7 +40,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "sass-watch": "sass styles:public/styles --watch --poll --no-source-map",
-    "heroku-postbuild" : "npm i --force && cd express-back-end && npm i"
+    "heroku-postbuild" : "npm i --force && cd express-back-end && npm i && cd ../ && npm install --prefix client && npm run build --prefix client"
   },
   "eslintConfig": {
     "extends": [
@@ -60,6 +60,7 @@
       "last 1 safari version"
     ]
   },
+  "proxy": "http://localhost:8080",
   "devDependencies": {
     "prettier": "2.7.1"
   }
