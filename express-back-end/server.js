@@ -11,12 +11,6 @@ require('dotenv').config({ path: require('find-config')('.env') })
 App.use(morgan('dev'));
 // Express Configuration
 App.use(Express.static('public'));
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("public"));
-  app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname,  "public", "index.html"));
-  });
-}
 App.use(Express.urlencoded({ extended: true }));
 //App.use(bodyParser.json())
 
