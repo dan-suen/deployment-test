@@ -8,8 +8,7 @@
   "homepage": "https://dan-suen.github.io/deployment-test-express-server",
   "scripts": {
     "go": "nodemon server.js",
-    "start": "node server.js",
-    "predeploy": "npm run start"
+    "start": "node server.js"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
