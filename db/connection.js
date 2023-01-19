@@ -3,20 +3,13 @@ const { Pool } = require('pg');
 //require('dotenv').config({ path: require('find-config')('.env') })
 
 const dbParams = {
-  connectionString : process.env.DATABASE_URL,
+  connectionString : "postgres://bsmbdeql:umwK_R2sizW8iVs_hAegal5JWfT-ojaZ@ruby.db.elephantsql.com/bsmbdeql",
   ssl: {
     rejectUnauthorized: false,
 },
 };
 
-const proParams = {
-  connectionString : process.env.DATABASE_URL,
-  ssl: {
-    rejectUnauthorized: false,
-},
-};
-
-const db = new Pool(process.env.NODE_ENV);
+const db = new Pool(dbParams);
 
 db.connect();
 console.log(process.env.DB_HOST)
