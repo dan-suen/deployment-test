@@ -2,7 +2,7 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.sequelize.query('CREATE EXTENSION citext;');
+    // await queryInterface.sequelize.query('CREATE EXTENSION citext;');
     await queryInterface.createTable('Users', {
       id: {
         allowNull: false,
